@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GymLogPro</string>
+    <string name="mainExerciseHint">Enter Exercise</string>
+    <string name="mainWeightHint">Enter Weight</string>
+    <string name="mainRepsHint">Enter Reps</string>
+    <string name="mainSubmitButton">Submit</string>
+    <string name="noLogsMessage">No records, time to go to gym</string>
+    <string name="et_hint_username" >Username</string>
+    <string name="et_hint_password">Password</string>
+    <string name="btn_Login">Login</string>
+    <string name="logout">Logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="logoutMenu">Logout</string>
+</resources>
