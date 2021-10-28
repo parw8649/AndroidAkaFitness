@@ -1,14 +1,14 @@
 #Got a new script! Snagged this bad boy from
 #https://github.com/pestrada/android-tdd-playground/blob/master/.travis.yml
 language: android
-jdk: oraclejdk8
+jdk: openjdk11
 sudo: false
 
 android:
  components:
    - platform-tools
    - tools
-   - build-tools-29.0.2
+   - build-tools-30.0.2
    - android-22
    - android-29
    - android-24
@@ -17,9 +17,12 @@ android:
    - extra-android-m2repository
 
 before_script:
+ - chmod +x gradlew
  # Create and start emulator
- - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
+ - echo no | android create avd --force -n test -t android-29 --abi armeabi-v7a
  - emulator -avd test -no-skin -no-audio -no-window &
  - android-wait-for-emulator
  - adb shell input keyevent 82 &
-script: ./gradlew connectedAndroidTest
+
+script:
+  - ./gradlew connectedAndroidTest
